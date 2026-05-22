@@ -12,7 +12,7 @@ public class CartTest extends BaseTest {
     public void checkLoginWithEmptyPassword() {
         loginPage.open()
                 .isPageOpened()
-                .login("standard_user", "secret_sauce")
+                .login(user, password)
                 .isPageOpened()
                 .addToCart("Test.allTheThings() T-Shirt (Red)")
                 .addToCart("Sauce Labs Bike Light")
