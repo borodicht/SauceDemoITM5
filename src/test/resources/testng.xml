@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite
+        name="Sauce Demo IT Matreshka 5"
+        parallel="tests">
+    
+    <listeners>
+        <listener class-name="utils.TestListener"/>
+    </listeners>
+
+    <test name="Thread 1">
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="checkLoginWithPositiveCred"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="Thread 2">
+        <classes>
+            <class name="tests.LocatorTest"/>
+            <class name="tests.CartTest"/>
+        </classes>
+    </test>
+</suite>
